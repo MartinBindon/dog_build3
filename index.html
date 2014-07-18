@@ -951,7 +951,8 @@
 // Tidied version
           var map;
 
-
+          // this function is called when the window loads. It creates the map and determines
+          // whether geolocation is supported and calls success or fail functions based on this.
           function initialize() {
                 if(navigator.geolocation) 
                   {

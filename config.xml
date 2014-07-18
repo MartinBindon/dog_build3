@@ -19,7 +19,10 @@
 
     <gap:platform name="android" />
 
-    <plugin name="Geolocation" value="org.apache.cordova.geolocation" />
+    <!-- remove this as it is out of date and from old documentation -->
+    <!-- <plugin name="Geolocation" value="org.apache.cordova.geolocation" /> -->
+
+    <gap:plugin name="org.apache.cordova.geolocation" />
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
