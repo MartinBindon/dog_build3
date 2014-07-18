@@ -975,12 +975,6 @@
                         enableHighAccuracy: true           
                       }
 
-                    var mapOptions = {
-                        zoom: 12,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP
-                      };
-
-                    map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 
                     navigator.geolocation.getCurrentPosition(geoSuccess, geoError, geoOptions);
                   } else {
@@ -993,6 +987,15 @@
             function geoSuccess(position) 
                       {
                         var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+
+                    var mapOptions = {
+                        zoom: 12,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        center: geolocate
+                      };
+
+                    map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 
                         document.getElementById("locationNote").innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
 
