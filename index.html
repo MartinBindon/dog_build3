@@ -826,9 +826,14 @@
                   </b>
               </p>
           </div>
-          <a data-role="button" href="#findMaps"> <!--onclick="initializeMap()"-->
+          <a data-role="button" id="#findMapsButton-1"> <!--onclick="initializeMap()"-->
               Pet food store
           </a>
+          <script>
+                  $('#findMapsButton-1').click(function() {
+                    $mobile.changePage($('findMaps'), 'pop');
+                  });
+          </script>
           <a data-role="button" href="#findMaps">
               Veterinary practice
           </a>
@@ -1009,7 +1014,8 @@
               // 3: timed out
             } 
              
-        google.maps.event.addDomListener(window, 'load', initialize);
+        //google.maps.event.addDomListener(window, 'load', initialize);
+
 
           </script>
 

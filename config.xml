@@ -19,19 +19,13 @@
 
     <gap:platform name="android" />
 
-    <!-- remove this as it is out of date and from old documentation -->
-    <!-- <plugin name="Geolocation" value="org.apache.cordova.geolocation" /> -->
-
-    <gap:plugin name="org.apache.cordova.geolocation" />
+    <plugin name="Geolocation" value="org.apache.cordova.geolocation" />
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 
-    <access origin="*://*.googleapis.com/*" subdomains="true" />
-    <access origin="*://*.gstatic.com/*" subdomains="true" />
-    <access origin="*://*.google.com/*" subdomains="true" />
-    <access origin="*://*.googleusercontent.com/*" subdomains="true" />
+
 </widget>
 
 
